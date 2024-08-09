@@ -8,20 +8,18 @@ This tag has two consent comands: default and update, only for `ad_storage` sign
 
 You can install this tag twice:
 
-- A first tag for the default command, when the user did not give his consent yet ;
-- A second tag for the update command, once you received the user choice. This tag can be used as a setup tag for all your UET tags.
+- A first tag for the default command, when the user has not given their consent yet ;
+- A second tag for the update command, once you have received the user's choice. This tag can be used as a setup tag for all your UET tags.
 
 # How to debug?
 
-While the Consent tab in Google Tag Manager preview only works for Google tags, you have to use the Developper Tools Console for checking the consent status for your UET tags.
+Since the Consent tab in Google Tag Manager preview only works for Google tags, you will need to use the Developper Tools Console to check the consent status for your UET tags.
 
-By typing `uetq` in the Developpers Tools Console, you can display the `uetq` object and checking for its `evq` property. In this property, you can found an array of consent status.
+By typing `uetq` in the Developpers Tools Console, you can display the `uetq` object and check its `evq` property. In this property, you can find an array of consent statuses.
 
-Also, if Consent Mode is correctly installed, your UET tags must be fired without consent, but, while there is no consent, none of these first-party cookies must be set: `_uetsid`, `_uetvid`, `_uetmsclkid`.
+Additionally, if Consent Mode is correctly installed, your UET tags should be fired without consent, but as long as there is no consent, none of these first-party cookies must be set: `_uetsid`, `_uetvid`, `_uetmsclkid`.
 
 
 # Notes
 
 [See Microsoft Ads official documentation about Consent Mode for UET tags](https://help.ads.microsoft.com/#apex/ads/en/60119/1)
-
-
